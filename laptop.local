@@ -1,0 +1,41 @@
+#!/bin/sh
+
+brew bundle --file=- <<EOF
+#Utilities
+
+brew "cmake"
+brew "direnv"
+brew "ffmpeg"
+brew "graphviz"
+brew "jq"
+brew "lame"
+brew "media-info"
+brew "mas"
+brew "mr"
+brew "openssl"
+brew "wget"
+brew "xz"
+brew "zsh-completions"
+
+cask_args appdir: '/Applications'
+cask "discord"
+cask "firefox"
+cask "google-chrome"
+cask "hammerspoon"
+cask "iterm2"
+cask "obsidian"
+cask "spotify"
+cask "steam"
+cask "zoom"
+
+# App store apps
+
+mas 'DaisyDisk', id: 411643860
+mas 'OmniGraffle', id: 1142578753
+mas 'WhatsApp', id: 1147396723
+EOF
+
+add_or_update_asdf_plugin "python" "https://github.com/danhper/asdf-python.git"
+
+fanch_echo "Installing latest Python"
+install_asdf_language "python"
