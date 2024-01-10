@@ -18,6 +18,7 @@ brew "xz"
 brew "zsh-completions"
 
 cask_args appdir: '/Applications'
+cask "1password"
 cask "discord"
 cask "firefox"
 cask "google-chrome"
@@ -37,5 +38,5 @@ EOF
 
 add_or_update_asdf_plugin "python" "https://github.com/danhper/asdf-python.git"
 
-fanch_echo "Installing latest Python"
+fancy_echo "Installing latest Python"
 install_asdf_language "python"
